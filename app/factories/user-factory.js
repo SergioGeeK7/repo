@@ -22,7 +22,7 @@
         ////////////////
         
         function get(id) {
-            return getAll()[id]
+            return getAll()[--id]
         }
         
         function getAll(){

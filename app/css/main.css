@@ -12,6 +12,10 @@ body{
     margin-right: 20px;
 }
 
+.footer{
+    
+}
+
 .card{
     background-color: white;
     margin: 15px;
@@ -99,7 +103,7 @@ footer {
      border-color: yellow;
      border: 3px solid yellow;
 }
-.num-risk-stratfication{
+.danger-stratification {
      border-color: red;
      border: 3px solid red;
 }

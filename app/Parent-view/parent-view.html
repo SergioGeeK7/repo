@@ -10,17 +10,17 @@
              <div class="col-md-3">
                  
                  <img src="app/assets/images/profile-fallback.png" alt="" class="img-profile">
-                 <p class="text-center">DOB: {{user.dob}}</p>
-                 <p class="text-center">{{user.age}} YRS</p>
+                 <p class="text-center">DOB: {{vm.user.dob}}</p>
+                 <p class="text-center">{{vm.user.age}} YRS</p>
              </div>
              <div class="col-md-4">
                 <div class="detail-info">
-                     <h5>{{user.name}}</h5>
-                     <div class="detail">{{user.state}}</div>
-                     <div class="detail">{{user.address}}</div>
-                     <div class="text-strong detail">PH:{{user.ph}} </div>
+                     <h5>{{vm.user.name}}</h5>
+                     <div class="detail">{{vm.user.state}}</div>
+                     <div class="detail">{{vm.user.address}}</div>
+                     <div class="text-strong detail">PH:{{vm.user.ph}} </div>
                      <br>
-                     <div class="detail">Enrolled Status : <span class="text-strong">{{user.enrolledStatus}}</span></div>
+                     <div class="detail">Enrolled Status : <span class="text-strong">{{vm.user.enrolledStatus}}</span></div>
                  </div>
              </div>
              <div class="col-md-5">
@@ -44,17 +44,10 @@
              </div>
              
              <div class="row">
-                 <div class="col-md-4 col-xs-4">
-                     <p class="text-center">Projected</p>
-                     <p class="risk-stratification projected-risk-stratification">4</p>
-                 </div>
-                 <div class="col-md-4 col-xs-4">
-                      <p class="text-center">2015</p>
-                     <p class="risk-stratification num-risk-stratification">3</p>
-                 </div>
-                 <div class="col-md-4 col-xs-4">
-                      <p class="text-center">2014</p>
-                     <p class="risk-stratification num-risk-stratfication">5</p>
+                 <div class="col-md-4 col-xs-4" ng-repeat="risk in vm.risks" class="risk">
+                     <p class="text-center">{{risk.name}}</p>
+                     <p class="risk-stratification "
+                        ng-class="{ 'projected-risk-stratification' : $index === 0 ,'num-risk-stratification' : $index > 0, 'danger-stratification' : $last }">{{risk.value}}</p>
                  </div>
              </div>  
          </div>

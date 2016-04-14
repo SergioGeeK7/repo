@@ -5,12 +5,16 @@
         .module('view.business-leader')
         .controller('BusinessLeader', Controller);
 
-    Controller.$inject = ["charts"];
+    Controller.$inject = ["charts","entities","$jquery"];
 
     /* @ngInject */
-    function Controller(charts){
+    function Controller(charts,entities,$){
         var vm = this;
-        charts.initCharts();
+        vm.entity = entities.get(1);
+        var configObject  = charts.getAll();
+        console.log(configObject.financialSummary);
+        $('#financial-chart').highcharts(configObject.financialSummary);
+        $('#physician-groups').highcharts(configObject.Phisyciangroups);
 
         activate();
 

@@ -9,15 +9,33 @@
     /* @ngInject */
     function charts(){
         var exports = {
-            getAll: getAll
+            getAll: getAll,
+            configObject:configObject
         };
         
 
         return exports;
 
         ////////////////
+        
+        function getAll(){
+            
+            var data = getData();
+            var configOb = Object
+                             .keys(data)
+                             .reduce(toConfigObject,{});
+            
+            return configOb;
+            
+            function toConfigObject(obj,next){
+                obj[next] = configObject(data[next]);
+                return obj;
+            }
+            
+        }
+        
 
-        function getAll() {
+        function getData() {
             return {
                 financialSummary:{
                     text: 'Overall Financial Summary',
@@ -52,6 +70,68 @@
                     } 
                 };
             }
+        
+        
+         
+        function configObject(config){
+            
+            return {
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: config.text
+                },
+                 navigation: {
+                    buttonOptions: {
+                        align: 'center'
+                    }
+                },
+                xAxis: {
+                    categories: config.categories,
+                    gridLineWidth: 1
+                },
+                yAxis: {
+                    min: 0,
+                    visible:false
+                },
+                legend: {
+                    reversed: true,
+                    align: 'left',
+                    verticalAlign: 'top',
+                    layout: 'horizontal', 
+                    x: 20,
+                    y: 5
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    },
+                    bar: {
+                        dataLabels: {
+                           enabled: true,
+                           align: "right",
+                           /*formatter:function (n){
+
+                               return "$"+this.total;
+                           }*/
+                           format: '${y}'
+                        }
+                    }
+                },
+                credits:{
+                  enabled:false  
+                },
+                drilldown: {
+                    allowPointDrilldown: false
+                },
+                series: config.series
+            };
+            
         }
-    }
+        
+        
+        
+        
+        }
 })();

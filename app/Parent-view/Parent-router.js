@@ -12,7 +12,7 @@ angular
                 url: '/parent-view',
                 views: {
                     "main": {
-                        controller: 'ParentView as homeCtrl',
+                        controller: 'ParentView as vm',
                         templateUrl: 'app/Parent-view/parent-view.html'
                     }
                 }

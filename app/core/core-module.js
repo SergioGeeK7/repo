@@ -3,5 +3,6 @@
 
 angular
     .module('core',["ui.router"])
+    .constant("$jquery",$)
     
 })()
