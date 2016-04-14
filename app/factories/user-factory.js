@@ -8,27 +8,33 @@
 
     /* @ngInject */
     function user(){
+        
+       
+        
         var exports = {
-            func: func,
-            get:users
+            get:get,
+            getAll:getAll
         };
         
 
         return exports;
 
         ////////////////
-
-        function func() {
+        
+        function get(id) {
+            return getAll()[id]
         }
         
-        function users() {
+        function getAll(){
             return [{
-                name:"Sergio",
-                age:23
-            },{
-                name:"Leonias",
-                age:24
-            }]
+                age:41,
+                dob:"07/12/74",
+                name:"Patty Friendman",
+                state:"221 W.Colorado Blvd",
+                address:"Dallas TX 52345",
+                ph : "432-452-5266",
+                enrolledStatus: "ESRD"
+            }];
         }
     }
 })();

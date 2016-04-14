@@ -9,13 +9,74 @@
     /* @ngInject */
     function charts(){
         var exports = {
-            initCharts: initCharts
+            initCharts: initCharts,
+            configObject: configObject
         };
         
 
         return exports;
 
         ////////////////
+        
+        
+        function configObject(text,categories,series){
+            
+            return {
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: text
+                },
+                 navigation: {
+                    buttonOptions: {
+                        align: 'center'
+                    }
+                },
+                xAxis: {
+                    categories: categories,
+                    gridLineWidth: 1
+                },
+                yAxis: {
+                    min: 0,
+                    visible:false
+                },
+                legend: {
+                    reversed: true,
+                    align: 'left',
+                    verticalAlign: 'top',
+                    layout: 'horizontal', 
+                    x: 20,
+                    y: 5
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal'
+                    },
+                    bar: {
+                        dataLabels: {
+                           enabled: true,
+                           align: "right",
+                           /*formatter:function (n){
+
+                               return "$"+this.total;
+                           }*/
+                           format: '${y}'
+                        }
+                    }
+                },
+                credits:{
+                  enabled:false  
+                },
+                drilldown: {
+                    allowPointDrilldown: false
+                },
+                series: series
+            };
+            
+        }
+        
+        
 
         function initCharts() {
             
@@ -38,9 +99,6 @@
                 },
                 yAxis: {
                     min: 0,
-                    title: {
-                        text: 'Total fruit consumption'
-                    },
                     visible:false
                 },
                 legend: {

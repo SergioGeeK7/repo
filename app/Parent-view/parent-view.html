@@ -10,17 +10,17 @@
              <div class="col-md-3">
                  
                  <img src="app/assets/images/profile-fallback.png" alt="" class="img-profile">
-                 <p class="text-center">DOB: 07/12/74</p>
-                 <p class="text-center">41 YRS</p>
+                 <p class="text-center">DOB: {{user.dob}}</p>
+                 <p class="text-center">{{user.age}} YRS</p>
              </div>
              <div class="col-md-4">
                 <div class="detail-info">
-                     <h5>Patty Friendman</h5>
-                     <div class="detail">221 W.Colorado Blvd</div>
-                     <div class="detail">Dallas TX 52345</div>
-                     <div class="text-strong detail">PH: 432-452-5266</div>
+                     <h5>{{user.name}}</h5>
+                     <div class="detail">{{user.state}}</div>
+                     <div class="detail">{{user.address}}</div>
+                     <div class="text-strong detail">PH:{{user.ph}} </div>
                      <br>
-                     <div class="detail">Enrolled Status : <span class="text-strong">ESRD</span></div>
+                     <div class="detail">Enrolled Status : <span class="text-strong">{{user.enrolledStatus}}</span></div>
                  </div>
              </div>
              <div class="col-md-5">
