@@ -1,0 +1,290 @@
+/*
+
+NO OLVIDAR PREFIXER
+*/
+
+body{
+   background-color: #dbe3e8;
+}
+
+.main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card{
+    background-color: white;
+    margin: 15px;
+}
+
+.card > div{
+    margin: 8px;
+}
+
+.text-strong{
+  font-weight: bold;
+}
+
+.color-scheme{
+    border-color: #d43b00;
+    background-color: #d43b00;
+}
+
+.detail{
+    color: #c6c6c6;
+}
+
+h5{
+    color: #333333;
+    font-weight:600;
+    font-size: 16px;
+}
+
+.nav-bar-main{
+    border-radius: 0;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+}
+
+.float-right {
+ float: right;
+ margin-right: 70px;
+}
+
+.btn-info-e{
+    text-align: center;
+    border-radius: 20px;
+    margin: 12px;
+    height: 35px;
+    line-height: 30px;
+    color: white;
+    overflow: hidden;
+}
+
+.current-risk-stratification{
+    border-color: orange;
+    background-color: orange;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    color:white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+.risk-stratification{
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.projected-risk-stratification{
+     border-color: orange;
+     border: 3px dashed orange;
+     color: orange;
+}
+.num-risk-stratification{
+     border-color: yellow;
+     border: 3px solid yellow;
+}
+.num-risk-stratfication{
+     border-color: red;
+     border: 3px solid red;
+}
+
+.img-profile{
+    border-radius: 100%;
+    border: 1px solid #e6e6e6;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+}
+.entity-logo{
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin-top:40%;
+}
+
+
+.detail-info{
+    margin-left: 15px;
+}
+
+
+.row-1 {
+    height: 200px;    
+    overflow: hidden;
+}
+
+#financial-chart,#physician-groups{
+    height: 100%;
+}
+
+.row-2 {
+    height: 230px;    
+    overflow: hidden;
+}
+
+/* Menu */
+
+header{
+    /*width: 20%;*/
+}
+
+
+header nav ul{
+list-style: none;
+overflow: hidden;
+padding-left: 0;
+}
+
+
+header nav ul li a{
+    color:white;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(44, 36, 36, 0.3)
+}
+
+.menu-bar a span{
+    color: #dc6026;
+    padding-top: 5px;
+}
+
+header nav ul li span{
+margin-right: 10px;
+}
+
+header nav ul li a:hover{
+background: #dd4f0e;
+text-decoration: none;
+color: white;
+}
+
+header nav{
+    width: 80%; 
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    width: 90%;
+    /*margin: 20px auto;*/
+    max-width: 1000px;
+}
+header nav ul li{
+
+    display: block; 
+    float: none;
+}
+
+.menu-bar{
+    display: block;
+    width: 100%;
+}
+
+.menu-bar .btn-menu{
+    display: block;
+    /* margen inerno */
+    /*padding: 20px;*/
+    padding-top: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing:border-box;
+    box-sizing:border-box ;
+}
+
+.menu-bar span{
+    /*float:right; */
+    font-size: 30px;
+    transform: translateY(-20%);
+}
+     
+#menu-pledged{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    /*right: 260px;*/
+    right: -100px;
+}
+
+.dropdown-menu ul{
+    list-style: none;
+}
+.right-menu{
+    display: flex;
+    padding-top: 15px;
+}
+
+
+.right-menu > div{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.perfil-container{
+    padding-left: 0 !important;
+}
+
+.perfil-img-container{
+    padding-right: 10px !important;
+    position: relative;
+    top: 20%;
+    transform: translateY(-20%);
+}
+
+.btn-open{
+    font-size: 15px;
+    color: white;
+}
+
+.perfil-dropdown{
+    list-style: none;
+}
+
+.navbar .perfil-dropdown a{
+    color: white;
+}
+
+#profile-navbar{
+    border-radius: 100%;
+    border: 1px solid #e6e6e6;
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.left-menu{
+    padding-left: 10px; 
+    display: inline-block;
+}
+
+#logo-talos{
+    width: 100px;
+    height: 40px;
+    transform: translateY(10%);
+}
+
+#logo-talos img{
+    top: 20%;
+    transform: translateY(-20%);
+}
