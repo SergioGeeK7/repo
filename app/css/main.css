@@ -12,8 +12,15 @@ body{
     margin-right: 20px;
 }
 
-.footer{
-    
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.footer a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 .card{
@@ -120,7 +127,6 @@ footer {
 .entity-logo{
     width: 150px;
     height: 50px;
-    display: block;
 }
 
 
@@ -260,11 +266,8 @@ header nav ul li{
 .perfil-dropdown{
     list-style: none;
 }
-
+   
 .entity-logo-container{
-    min-height: 10em;
-    display: table-cell;
-    vertical-align: middle
 }
 
 .navbar .perfil-dropdown a{

@@ -9,7 +9,7 @@ angular
     /* @ngInject */
     function configuration ($stateProvider) {
         $stateProvider.state('parent-view', {
-                url: '/parent-view',
+                url: '/home',
                 views: {
                     "main": {
                         controller: 'ParentView as vm',
@@ -17,6 +17,7 @@ angular
                     }
                 }
             });
+        
     }
     
 })();

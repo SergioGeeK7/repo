@@ -53,7 +53,7 @@
                 Phisyciangroups:{
                         text: 'Phisycian Groups',
                         categories: ['Texas Health Physician Group', 'Genessis Physician Group', 'Uptown Physician Group', 'Healcore Physician Group', 'JefersoMad'],
-                         series:   [ {
+                        series:   [ {
                                     name: 'Projected',
                                     data:[5324000,4805000,5800000,4600000,4300000],
                                     color:"gray"
@@ -80,7 +80,8 @@
                     type: 'bar'
                 },
                 title: {
-                    text: config.text
+                    text: config.text,
+                    floating: true,
                 },
                  navigation: {
                     buttonOptions: {
@@ -101,7 +102,7 @@
                     verticalAlign: 'top',
                     layout: 'horizontal', 
                     x: 20,
-                    y: 5
+                    y: 20
                 },
                 plotOptions: {
                     series: {
